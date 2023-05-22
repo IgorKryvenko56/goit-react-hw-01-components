@@ -25,6 +25,10 @@ import friends from './friends.json';
 
       <h2>My Friends</h2>
       <FriendList friends={friends} />
+      <FriendListItem
+        avatar={friends.avatar}
+        name={friends.name}
+        />
       <div>
         <h3>Transaction History</h3>
         <TransactionHistory items={transactions} />
