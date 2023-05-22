@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {
     const getRandomColor = () => {
@@ -27,14 +27,14 @@ export const Statistics = ({ title, stats }) => {
   );
 };            
         
-Statistics.propTypes = {
- title: PropTypes.string,
- stats: PropTypes.arrayOf(
-    PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        percentage: PropTypes.string.isRequired,
-    })
- ).isRequired,
-}; 
+// Statistics.propTypes = {
+//  title: PropTypes.string,
+//  stats: PropTypes.arrayOf(
+//     PropTypes.shape({
+//         label: PropTypes.string.isRequired,
+//         percentage: PropTypes.string.isRequired,
+//     })
+//  ).isRequired,
+// }; 
 
 export default Statistics;
