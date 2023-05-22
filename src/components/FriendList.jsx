@@ -7,7 +7,7 @@ export const FriendList = ({ friends }) => {
     <div>
       <ul className="friend-list">
         {friends.map((friend, index) => (
-          <li key={index}>{friend}</li>
+          <li key={index}>{friend.name}</li>
         ))}
       </ul>
     </div>
