@@ -1,13 +1,13 @@
 import React from 'react';
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics.jsx';
-import FriendList from './FriendList';
-import FriendListItem from './FriendListItem';
-import TransactionHistory from './TransactionHistory';
-import transactions from './transactions.json';
+import FriendList from './Friendlist/FriendList';
+import FriendListItem from './Friendlist/FriendListItem';
+import TransactionHistory from './Transactions/TransactionHistory';
+import transactions from './Transactions/transactions.json';
 import user from './user.json';
 import data from './data.json';
-import friends from './friends.json';
+import friends from './Friendlist/friends.json';
 
  export const App = () => {
   return (
@@ -25,10 +25,7 @@ import friends from './friends.json';
 
       <h2>My Friends</h2>
       <FriendList friends={friends} />
-      <FriendListItem
-        avatar={friends.avatar}
-        name={friends.name}
-        />
+    
       <div>
         <h3>Transaction History</h3>
         <TransactionHistory items={transactions} />

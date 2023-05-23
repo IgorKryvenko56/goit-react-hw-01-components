@@ -1,31 +1,41 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-export const Statistics = ({ title, stats }) => {
-    const getRandomColor = () => {
-      const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'];
-      const randomIndex = Math.floor(Math.random() * colors.length);
-      return colors[randomIndex];
-    };
+import { StatisticsContainer } from './Statistics.styled';
+import { Title } from './Statistics.styled';
+import { StatList } from './Statistics.styled';
+import { StatItem } from './Statistics.styled';
+import { Label } from './Statistics.styled';
+import { Percentage } from './Statistics.styled';
 
-  return (
-    <section className="statistics">
-      {/* <h2 class="title">Upload stats</h2> */}
-          {title && <h2 className="title">{title}</h2>}
-          
-          <ul className="stat-list">
-              {stats.map((stat, index) => (
-           <li key={index} className="item">
-            <span className="label" style={{ backgroundColor: getRandomColor() }}>
-              {stat.label}
-                      </span>
-           <span className="percentage">{stat.percentage}</span>
-          </li>
+export const Statistics = ({ title, stats }) => {
+  const getRandomHexColor = () => {
+    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  }; 
+   return (
+    <StatisticsContainer>
+      {title && <Title>{title}</Title>}
+
+      <StatList>
+        {stats.map(stat => (
+          <StatItem
+            key={stat.id}
+             style={{ backgroundColor: getRandomHexColor() }}
+          >
+            <Label color={getRandomHexColor()}>{stat.label}</Label>
+            <Percentage>{stat.percentage}</Percentage>
+          </StatItem>
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </StatisticsContainer>
   );
-};            
+};
+
+export default Statistics;
+
+
         
 // Statistics.propTypes = {
 //  title: PropTypes.string,
@@ -37,4 +47,4 @@ export const Statistics = ({ title, stats }) => {
 //  ).isRequired,
 // }; 
 
-export default Statistics;
+// export default Statistics;
