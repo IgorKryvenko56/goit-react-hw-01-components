@@ -2,7 +2,6 @@ import React from 'react';
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics.jsx';
 import FriendList from './Friendlist/FriendList';
-import FriendListItem from './Friendlist/FriendListItem';
 import TransactionHistory from './Transactions/TransactionHistory';
 import transactions from './Transactions/transactions.json';
 import user from './user.json';
