@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+ import PropTypes from 'prop-types';
 
 import { StatisticsContainer } from './Statistics.styled';
 import { Title } from './Statistics.styled';
@@ -37,14 +37,14 @@ export default Statistics;
 
 
         
-// Statistics.propTypes = {
-//  title: PropTypes.string,
-//  stats: PropTypes.arrayOf(
-//     PropTypes.shape({
-//         label: PropTypes.string.isRequired,
-//         percentage: PropTypes.string.isRequired,
-//     })
-//  ).isRequired,
-// }; 
+Statistics.propTypes = {
+ title: PropTypes.string,
+ stats: PropTypes.arrayOf(
+    PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.string.isRequired,
+    })
+ ).isRequired,
+}; 
 
 // export default Statistics;

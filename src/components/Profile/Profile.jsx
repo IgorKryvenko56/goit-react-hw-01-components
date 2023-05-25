@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ProfileWrapper } from './Profile.styled'
 import { Description } from './Profile.styled';
 import { Avatar } from './Profile.styled';
@@ -48,18 +48,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
-// Profile.propTypes = {
-//   username: PropTypes.string,
-//   tag: PropTypes.string,
-//   location: PropTypes.string,
-//   avatar: PropTypes.string,
-//   stats: PropTypes.arrayOf(
-//     PropTypes.shape({
-//      followers: PropTypes.number.isRequired,
-      // views: PropTypes.number.isRequired,
-      // likes: PropTypes.number.isRequired,  
-//     })
-//   ).isRequired,
-// };
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+     followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,  
+    }).isRequired,
+};
 
 export default Profile;
