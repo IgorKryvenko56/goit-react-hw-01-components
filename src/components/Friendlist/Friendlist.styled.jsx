@@ -22,7 +22,7 @@ export const Status = styled.span`
   height: 15px;
   margin-right: 15px;
   border-radius: 50%;
-  background-color: ${props => (props.statusType ? 'green' : 'red')};
+  background-color: ${({ statusType }) => (statusType ? 'green' : 'red')}; 
 `;
 
 export const Avatar = styled.img`
